@@ -1,4 +1,4 @@
-# -*- coding: utf8 -*-
+# -*- coding: utf-8 -*-
 #
 # Created by Nils Herde on 27/03/16
 #
