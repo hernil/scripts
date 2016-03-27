@@ -13,7 +13,6 @@
 
 import logging
 import subprocess
-import sys
 
 
 logger = logging.getLogger('backup-pruner')
