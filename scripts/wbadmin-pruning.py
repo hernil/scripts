@@ -13,6 +13,7 @@
 
 import logging
 import subprocess
+import sys
 
 
 logger = logging.getLogger('backup-pruner')
@@ -60,5 +61,7 @@ def main():
         # Something else happened (what). Let's log that.
         else:
             logger.warning('wbadmin exited with exit code: ' + job.returncode)
+            exit(code=1)
 
 main()
+exit(code=0)
