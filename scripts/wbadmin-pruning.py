@@ -13,6 +13,7 @@
 
 import logging
 import subprocess
+import sys
 
 
 logger = logging.getLogger('backup-pruner')
@@ -41,7 +42,7 @@ def main():
     for disk in disks:
         # Subprocess Popen takes command with arguments as a list of strings
         cmd = [path, "delete", "backup", "-keepVersions:%s" % versions,
-               "-backupTarget:%s" % disks.get(disk).get('volume'), "-quiet"]
+               "-backupTarget:%s" % disks[disk]['volume'], "-quiet"]
         logger.info(disk + ' started job')
         # Dispatch subprocess to perform pruning
         job = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
@@ -50,7 +51,7 @@ def main():
         # This returncode is wbadmins way of saying destination is not mounted
         # This is expected unless all targets are mounted at all times (rotating backup destionations)
         if job.returncode == 4294967294:
-            logger.info(disk + ' is not mounted')
+            logger.debug(disk + ' is not mounted')
         # Successfully terminated process
         elif job.returncode == 0:
             # We're interested in the process output for logging
