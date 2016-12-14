@@ -28,7 +28,7 @@ versions = 20
 # Because paths are awkward on Windows there is an escape back slash before every back slash
 disks = {
     'DISK_01': {'day': 'mandag', 'volume': '\\\\?\\Volume{557998A3-CF50-4139-80E1-2A8161A823D7}\\'},
-    'DISK_02': {'day': 'torsdag', 'volume': '‪\\\\?\\Volume{35AE4FBC-8730-4434-A988-F0A440492B5A}\\'},
+    'DISK_02': {'day': 'torsdag', 'volume': '\\\\?\\Volume{35AE4FBC-8730-4434-A988-F0A440492B5A}\\'},
     'DISK_03': {'day': 'onsdag', 'volume': '\\\\?\\Volume{8BEDB394-42E0-4DE6-9EBA-9361E2C16B19}\\'},
     'DISK_04': {'day': 'fredag1', 'volume': '\\\\?\\Volume{F7FD0E0B-5014-4DB8-9CB5-0EEA3F47C569}\\'},
     'DISK_05': {'day': 'tirsdag', 'volume': '\\\\?\\Volume{594520BD-731A-41F6-A828-C4080B2900EC}\\'},
